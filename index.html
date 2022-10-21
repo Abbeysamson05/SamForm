@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      h1,
+      h3,
+      h5 {
+        text-align: center;
+      }
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* width: 100%; */
+        align-content: center;
+        justify-items: center;
+        row-gap: 16px;
+      }
+      .form-grid input,
+      .form-grid label {
+        width: 100%;
+      }
+      .parent-form {
+        padding: 12px 6px;
+        border: solid 2px gray;
+        border-radius: 6px;
+        width: 100%;
+      }
+      form label {
+        display: block;
+        margin-bottom: 4px;
+      }
+      form input {
+        border: none;
+      }
+      .sub-name {
+        display: flex;
+        column-gap: 8px;
+        width: 100%;
+      }
+      .intro {
+        padding: 20px 6px;
+        margin-bottom: 16px;
+        border: solid 2px gray;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: start;
+        border-radius: 6px;
+      }
+      .btn {
+        border-radius: 50%;
+        height: 12px;
+        width: 12px;
+        border: solid 2px brown;
+      }
+      .taofeek {
+        display: flex;
+        gap: 12px;
+        margin-left: 6px;
+      }
+      .last-btn {
+        height: 18px;
+        width: 18px;
+      }
+      .btn1 {
+        background-color: brown;
+      }
+      .password {
+        margin-top: 200px;
+      }
+      .all-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 12px 48px;
+      }
+      .list-color {
+        color: green;
+      }
+      .odd-out {
+        color: brown;
+      }
+      .foot {
+        display: flex;
+        flex-direction: column;
+        row-gap: 14px;
+      }
+      .footer-btn {
+        background-color: gray;
+        /* width: 100%; */
+        text-align: center;
+        margin: 24px;
+        padding: 14px;
+        color: white;
+        border: none;
+        border-radius: 18px;
+      }
+      .links {
+        margin-left: 72px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        /* width: 100%; */
+        /* align-items: center; */
+        /* justify-content: center; */
+      }
+      .link {
+        display: inline-block;
+        padding: 18px 24px;
+        text-decoration: none;
+      }
+      .mpesa {
+        background-color: black;
+        color: white;
+        text-align: center;
+      }
+      .facebook {
+        text-align: center;
+        background-color: blue;
+        color: white;
+      }
+      .google {
+        text-align: center;
+        background-color: white;
+        box-shadow: 0 0.6rem 2.4rem rgba(0, 0, 0, 0.075);
+        color: black;
+      }
+      .connect {
+        color: brown;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .form2 {
+        margin-top: 250px;
+      }
+      .footer-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 48px;
+        margin: 72px;
+      }
+
+      @media (max-width: 56.25em) {
+        html {
+          font-size: 75%;
+        }
+        .container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>SamForm</h1>
+    </header>
+    <div class="container">
+      <div class="semi-container">
+        <h3>Create an account</h3>
+
+        <img
+          src="img/laura-jones.jpg"
+          alt="Laura Jones"
+          width="200"
+          height="200"
+        />
+        <h5>Upload your photo</h5>
+        <section>
+          <div class="intro">
+            <p>Gender</p>
+            <input class="first" id="name" type="radio" name="name" />
+            <p>Male</p>
+            <input class="first" id="name" type="radio" name="name" />
+            <p>Female</p>
+          </div>
+          <form class="form-grid">
+            <div class="sub-name">
+              <div class="parent-form">
+                <label for="name">First Name</label>
+                <input
+                  class="first"
+                  id="name"
+                  type="text"
+                  placeholder="E.g. Abiodun"
+                />
+              </div>
+              <div class="parent-form">
+                <label for="name">Last name</label>
+                <input
+                  class="last"
+                  id="name"
+                  type="text"
+                  placeholder="E.g. Ajayi"
+                />
+              </div>
+            </div>
+            <div class="parent-form">
+              <label for="number">Phone Number</label>
+              <input
+                class="number"
+                id="number"
+                type="text"
+                placeholder="09033801336"
+              />
+            </div>
+            <div class="parent-form">
+              <label for="email">Email</label>
+              <input
+                class="email"
+                id="email"
+                type="text"
+                placeholder="abc@gmail.com"
+              />
+            </div>
+            <div class="parent-form">
+              <label for="number">Date Of Birth</label>
+              <input
+                class="birth"
+                id="name"
+                type="text"
+                placeholder="set your date of birth"
+              />
+            </div>
+            <div class="parent-form">
+              <label for="password">Enter your Password</label>
+              <input
+                id="password"
+                type="password"
+                placeholder="Set Your Password"
+                required
+              />
+            </div>
+          </form>
+          <ul class="all-list">
+            <li class="list-color">Must contain a number.</li>
+            <li class="list-color">
+              Must contain at least 1 upper case character.
+            </li>
+            <li class="list-color odd-out">Minimum of 6 characters.</li>
+          </ul>
+        </section>
+      </div>
+      <div class="semi-container">
+        <section>
+          <div class="links">
+            <a href="#" class="link mpesa"> Connectez vous-avec TWITTER</a>
+            <a href="#" class="link facebook"> Connectez vous-avec FACEBOOK</a>
+            <a href="#" class="link google"> Connectez vous-avec Google</a>
+            <p>
+              Vouz avez deja un compte?<a href="#" class="connect">
+                Connecxion</a
+              >
+            </p>
+          </div>
+          <form class="form-grid form2">
+            <div class="parent-form">
+              <label for="content">Place of Birth</label>
+              <input
+                id="birth"
+                type="text"
+                placeholder="Enter your place of birth"
+                required
+              />
+            </div>
+
+            <div class="parent-form">
+              <label for="content">Commune</label>
+              <input
+                id="community"
+                type="text"
+                placeholder="Name of your community"
+                required
+              />
+            </div>
+            <div class="parent-form">
+              <label for="content">Province</label>
+              <input
+                id="province"
+                type="text"
+                placeholder="Name of your province"
+                required
+              />
+            </div>
+            <div class="parent-form">
+              <label for="content">Town</label>
+              <input
+                id="town"
+                type="text"
+                placeholder="Name of your Town"
+                required
+              />
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+    <aside class="foot">
+      <div class="taofeek">
+        <input class="first" id="name" type="checkbox" name="check-box" />
+        <p>
+          I confirm to the terms and conditions of the company and respect their
+          confidentials
+        </p>
+      </div>
+      <div class="taofeek">
+        <input class="first" id="name" type="checkbox" name="check-box" />
+        <p>All empty forms have been filled</p>
+      </div>
+      <button class="footer-btn">Submit Form</button>
+    </aside>
+    <footer>
+      <div class="footer-link">
+        <a href="#" class="link">About Us</a>
+        <a href="#" class="link">Sell Your Products</a>
+        <a href="#" class="link">Contact US</a>
+        <a href="#" class="link">Terms</a>
+        <a href="#" class="link">Policies</a>
+      </div>
+      <p>Copyright</p>
+    </footer>
+  </body>
+  <script>
+    const submit = document.querySelector(".footer-btn");
+    const first = document.querySelector(".first");
+    const last = document.querySelector(".last");
+    const number = document.querySelector(".number");
+    const email = document.querySelector(".email");
+    const birth = document.querySelector(".birth");
+    // console.log(first);
+    submit.addEventListener("click", function (e) {
+      const firstName = first.value;
+      const lastName = last.value;
+      const num = +number.value;
+      const mail = email.value;
+      const born = birth.value;
+      // console.log(firstName);
+      console.log(firstName, lastName, num, mail, born);
+      if (!firstName || !lastName || !num || !mail || !born)
+        return prompt("Fields not Completed😌");
+      submit.style.backgroundColor = "green";
+      submit.textContent = "Form successfully submitted🥰";
+      prompt(
+        `First-name: ${firstName}
+        Last-name: ${lastName}
+        Number: ${num}
+        Email: ${mail}
+        Birth: ${born}
+        `
+      );
+    });
+  </script>
+</html>
